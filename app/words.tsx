@@ -17,7 +17,6 @@ export const words: Word[] = [
   { german: "das Verhalten", mongolian: ["Зан байдал"] },
   { german: "der Unterschied", mongolian: ["Ялгаа"] },
   { german: "die Teilzeitarbeit", mongolian: ["Хагас цагийн ажил"] },
-  { german: "das gehalt", mongolian: ["Цалин"] },
   { german: "die Verantwortung", mongolian: ["Хариуцлага"] },
   { german: "das Gehalt", mongolian: ["Цалин"] },
   { german: "die bewerbung", mongolian: ["Өргөдөл"] },
