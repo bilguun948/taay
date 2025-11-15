@@ -1,14 +1,12 @@
-
 "use client";
 import { useState } from "react";
 import { words } from "../words";
 
 export default function Word() {
   const [currentWord, setCurrentWord] = useState(getRandomWord());
-  console.log(currentWord);
   const [userInput, setUserInput] = useState("");
-   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
-  console.log(isCorrect);
+  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+
   function getRandom() {
     setCurrentWord(getRandomWord());
     setUserInput("");
@@ -16,41 +14,65 @@ export default function Word() {
   }
 
   function checkAnswer() {
-  const normalizedInput = userInput.trim().toLowerCase().normalize("NFC");
+    const normalizedInput = userInput.trim().toLowerCase().normalize("NFC");
 
-  const isMatch = currentWord.mongolian.some(answer => {
-    return answer.toLowerCase().normalize("NFC") === normalizedInput;
-  });
+    const isMatch = currentWord.mongolian.some(answer => {
+      return answer.toLowerCase().normalize("NFC") === normalizedInput;
+    });
 
-  setIsCorrect(isMatch);
-}
+    setIsCorrect(isMatch);
+  }
 
   return (
-    <div className="p-4">
-        <div className="p-4 flex items-center justify-center bg-gray-900">
-      <h1 className="text-white">Герман үг: <b>{currentWord.german}</b></h1>
-      </div>
-    <div className="my-4 bg-gray-300 p-4">
-      <input
-        value={userInput}
-        onChange={(e) => setUserInput(e.target.value)}
-        placeholder="Монгол тайлбар"
-        className="border p-2"
-      />
+    <div className="min-h-screen flex items-center justify-center  p-4">
+      <div className="w-full max-w-md bg-white shadow-lg rounded-xl p-6 space-y-6">
+        
+        <h1 className="text-xl font-semibold text-center text-gray-800">
+          Герман үг: <b className="text-blue-600">{currentWord.german}</b>
+        </h1>
+        <input
+          value={userInput}
+          onChange={(e) => setUserInput(e.target.value)}
+          placeholder="Монгол тайлбар"
+          className="
+            w-full 
+            border 
+            border-gray-300 
+            rounded-lg 
+            p-3 
+            text-lg 
+            focus:outline-none 
+            focus:border-blue-500
+          "
+        />
+        <div className="flex flex-col sm:flex-row gap-3">
+          <button 
+            onClick={checkAnswer} 
+            className="flex-1 bg-blue-500 text-white p-3 rounded-lg text-center active:scale-95"
+          >
+            Шалгах
+          </button>
 
-      <button onClick={checkAnswer} className="bg-blue-500 text-white p-2 ml-2">
-        Шалгах
-      </button>
+          <button 
+            onClick={getRandom} 
+            className="flex-1 bg-gray-500 text-white p-3 rounded-lg text-center active:scale-95"
+          >
+            Дараагийн үг
+          </button>
+        </div>
 
-      <button onClick={getRandom} className="bg-gray-500 text-white p-2 ml-2">
-        Дараагийн үг
-      </button>
-</div>
-<div className="flex items-center justify-center">
-      {isCorrect === true && <p className="text-green-500">Зөв!</p>}
-      {isCorrect === false && (
-        <p className="text-red-500">Буруу! Зөв хариулт: {currentWord.mongolian}</p>
-      )}
+        <div className="text-center min-h-[30px]">
+          {isCorrect === true && (
+            <p className="text-green-600 font-semibold text-lg">Зөв!</p>
+          )}
+          {isCorrect === false && (
+            <p className="text-red-600 font-semibold text-lg">
+              Буруу! Зөв хариулт:{" "}
+              <span className="underline">{currentWord.mongolian}</span>
+            </p>
+          )}
+        </div>
+
       </div>
     </div>
   );
