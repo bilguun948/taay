@@ -35,12 +35,14 @@ export default function Word() {
           onChange={(e) => setUserInput(e.target.value)}
           placeholder="Монгол тайлбар"
           className="
+          placeholder:text-gray-700
             w-full 
             border 
             border-gray-300 
             rounded-lg 
             p-3 
             text-lg 
+            text-gray-800
             focus:outline-none 
             focus:border-blue-500
           "
