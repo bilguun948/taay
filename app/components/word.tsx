@@ -42,7 +42,7 @@ export default function Word() {
             rounded-lg 
             p-3 
             text-lg 
-            text-gray-300
+            text-gray-600
             focus:outline-none 
             focus:border-blue-500
           "
