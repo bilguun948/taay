@@ -24,7 +24,7 @@ export default function Word() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center  p-4">
+    <div className="h-full flex items-center justify-center  p-10">
       <div className="w-full max-w-md bg-white shadow-lg rounded-xl p-6 space-y-6">
         
         <h1 className="text-xl font-semibold text-center text-gray-800">
@@ -50,14 +50,14 @@ export default function Word() {
         <div className="flex flex-col sm:flex-row gap-3">
           <button 
             onClick={checkAnswer} 
-            className="flex-1 bg-blue-500 text-white p-3 rounded-lg text-center active:scale-95"
+            className="flex-1 bg-blue-500 text-white p-2 rounded-lg text-center active:scale-95"
           >
             Шалгах
           </button>
 
           <button 
             onClick={getRandom} 
-            className="flex-1 bg-gray-500 text-white p-3 rounded-lg text-center active:scale-95"
+            className="flex-1 bg-gray-500 text-white p-2 rounded-lg text-center active:scale-95"
           >
             Дараагийн үг
           </button>
