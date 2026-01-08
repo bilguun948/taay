@@ -24,11 +24,11 @@ export default function Word() {
   }
 
   return (
-    <div className="h-full flex items-center justify-center  p-10">
-      <div className="w-full max-w-md bg-white shadow-lg rounded-xl p-6 space-y-6">
+    <div className="h-full flex items-center justify-center p-40">
+      <div className="w-full max-w-md bg-gray-200 shadow-lg rounded-xl p-6 space-y-6 border-gray-300 border-[2px]">
         
         <h1 className="text-xl font-semibold text-center text-gray-800">
-          Герман үг: <b className="text-blue-600">{currentWord.german}</b>
+          Герман үг: <b className="text-orange-500">{currentWord.german}</b>
         </h1>
         <input
           value={userInput}
@@ -42,15 +42,15 @@ export default function Word() {
             rounded-lg 
             p-3 
             text-lg 
-            text-gray-600
+            text-orange-500
             focus:outline-none 
-            focus:border-blue-500
+            focus:border-orange-500
           "
         />
         <div className="flex flex-col sm:flex-row gap-3">
           <button 
             onClick={checkAnswer} 
-            className="flex-1 bg-blue-500 text-white p-2 rounded-lg text-center active:scale-95"
+            className="flex-1 bg-orange-500 text-white p-2 rounded-lg text-center active:scale-95"
           >
             Шалгах
           </button>
