@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { words } from "../words";
+import Header from  "../component/header"
 
 export default function Word() {
   const [currentWord, setCurrentWord] = useState(getRandomWord());
@@ -24,8 +25,10 @@ export default function Word() {
   }
 
   return (
-    <div className="h-full flex items-center justify-center p-40">
-      <div className="w-full max-w-md bg-gray-200 shadow-lg rounded-xl p-6 space-y-6 border-gray-300 border-[2px]">
+    <>
+    {/* <Header/> */}
+    <div className="min-h-screen flex items-center justify-center ">
+      <div className="w-full max-w-md bg-gray-200 shadow-lg rounded-xl p-6 space-y-6 border-gray-300 border-2">
         
         <h1 className="text-xl font-semibold text-center text-gray-800">
           Герман үг: <b className="text-orange-500">{currentWord.german}</b>
@@ -77,6 +80,7 @@ export default function Word() {
 
       </div>
     </div>
+    </>
   );
 }
 
