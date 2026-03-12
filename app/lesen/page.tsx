@@ -69,11 +69,11 @@ useEffect(() => {
   <ProgressCircle percent={progress.teil1} />
 </div>
 <div className="flex items-center justify-between border p-4 rounded-lg">
-  <Link href="/lesen/teil1/ubung1">
+  <Link href="/lesen/teil1/ubung2">
   <div className="cursor-pointer hover:bg-gray-100 p-4 rounded-lg transition">
-    <p className="text-sm text-gray-500">Übung 1.1</p>
+    <p className="text-sm text-gray-500">Übung 1.2</p>
     <p className="font-bold">
-      Die Macht der inneren und äußeren Bilder
+      Wenn Kaufen zur Belastung wird
     </p>
   </div>
 </Link>
@@ -81,11 +81,11 @@ useEffect(() => {
   <ProgressCircle percent={progress.teil1} />
 </div>
 <div className="flex items-center justify-between border p-4 rounded-lg">
-  <Link href="/lesen/teil1/ubung1">
+  <Link href="/lesen/teil1/ubung3">
   <div className="cursor-pointer hover:bg-gray-100 p-4 rounded-lg transition">
-    <p className="text-sm text-gray-500">Übung 1.1</p>
+    <p className="text-sm text-gray-500">Übung 1.3</p>
     <p className="font-bold">
-      Die Macht der inneren und äußeren Bilder
+      Schönheitsnormen und der Wunsch nach Veränderung
     </p>
   </div>
 </Link>
