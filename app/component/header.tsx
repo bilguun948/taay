@@ -35,9 +35,9 @@ export default function Header(){
           {/* RIGHT SIDE */}
           <div className="flex items-center gap-3">
             {/* LOGIN */}
-            <button className="hidden sm:block border border-orange-400 text-white px-4 py-1 rounded-lg hover:text-orange-400">
+            <Link href="/login" className="hidden sm:block border border-orange-400 text-white px-4 py-1 rounded-lg hover:text-orange-400">
               Нэвтрэх
-            </button>
+            </Link>
 
             {/* HAMBURGER (MOBILE) */}
             <button
