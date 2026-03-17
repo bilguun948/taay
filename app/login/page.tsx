@@ -7,14 +7,30 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    console.log("Email:", email);
-    console.log("Password:", password);
+  const res = await fetch("/api/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email,
+      password,
+    }),
+  });
 
-    // Энд API дуудаж болно
-  };
+  const data = await res.json();
+
+  console.log(data);
+
+  if (res.ok) {
+    alert("Амжилттай нэвтэрлээ");
+  } else {
+    alert(data.error);
+  }
+};
 
   return (
     <>
