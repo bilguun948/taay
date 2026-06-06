@@ -26,7 +26,7 @@ export default function Word() {
 
   return (
     <>
-    {/* <Header/> */}
+    <Header/>
     <div className="min-h-screen flex items-center justify-center ">
       <div className="w-full max-w-md bg-gray-200 shadow-lg rounded-xl p-6 space-y-6 border-gray-300 border-2">
         

@@ -1,17 +1,17 @@
-import { prisma } from "@/lib/prisma"
-// import bcrypt from "bcrypt"
+// import { prisma } from "@/lib/prisma"
+// // import bcrypt from "bcrypt"
 
-export async function POST(req: Request) {
-  const body = await req.json()
+// export async function POST(req: Request) {
+//   const body = await req.json()
 
-  const hashedPassword = await body.password
+//   const hashedPassword = await body.password
 
-  const user = await prisma.user.create({
-    data: {
-      email: body.email,
-      password: hashedPassword,
-    },
-  })
+//   const user = await prisma.user.create({
+//     data: {
+//       email: body.email,
+//       password: hashedPassword,
+//     },
+//   })
 
-  return Response.json(user)
-}
+//   return Response.json(user)
+// }
